@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options</title>
+</head>
+<body>
+    <h1>Options</h1>
+    <form id="options-form">
+        <label for="blocklist">Blocklist (Enter one URL per line):</label><br>
+        <textarea id="blocklist" name="blocklist" rows="10" cols="50"></textarea><br>
+
+        <label for="probability">Probability of pass-through (0-100%):</label><br>
+        <input type="number" id="probability" name="probability" min="0" max="100"><br>
+
+        <label for="retry-time">Wait time between retries (seconds):</label><br>
+        <input type="number" id="retry-time" name="retry-time" min="1"><br>
+
+        <input type="submit" value="Save">
+    </form>
+    <script src="options.js"></script>
+</body>
+</html>
