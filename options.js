@@ -5,7 +5,7 @@ function loadOptions() {
     chrome.storage.sync.get({
         blocklist: '',
         probability: 100,
-        retryTime: 60
+        retryTime: 2 
     }, function(items) {
         document.getElementById('blocklist').value = items.blocklist;
         document.getElementById('probability').value = items.probability;
