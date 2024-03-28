@@ -4,6 +4,9 @@
   "version": "1.0",
   "description": "A simple chrome extension to help you focus on your work by blocking distracting websites some of the time.",
   "permissions": ["storage", "webRequest", "webNavigation"],
+  "icons": {
+    "128": "icon128.png"
+  },
   "incognito": "split",
   "background": {
     "service_worker": "background.js"
