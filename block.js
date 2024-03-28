@@ -17,9 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const quote = quotes[randomIndex].quote;
     const source = quotes[randomIndex].source;
-    document.getElementById('quote').innerHTML = quote;
-    document.getElementById('source').innerHTML = source;
-    document.getElementById('quote').setAttribute('data-source', source);
+    const quoteElement = document.getElementById('quote');
+    const sourceElement = document.getElementById('source');
+    quoteElement.innerHTML = quote;
+    sourceElement.innerHTML = source;
+    quoteElement.setAttribute('data-source', source);
 
     var candle = document.getElementById('candle');
     candle.addEventListener('animationend', function() {
