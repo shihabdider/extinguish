@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocked</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #quote {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
+        }
+        @keyframes candleFlicker {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        #candle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 200px;
+            background: url('candle.png') no-repeat center center;
+            background-size: contain;
+            animation: candleFlicker 5s ease-in-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div id="candle"></div>
+    <div id="quote">Let the discerning man guard the mind, so difficult to detect and extremely subtle, seizing whatever it desires. A guarded mind brings happiness.</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var candle = document.getElementById('candle');
+            candle.addEventListener('animationend', function() {
+                document.getElementById('quote').style.opacity = 1;
+            });
+        });
+    </script>
+</body>
+</html>
