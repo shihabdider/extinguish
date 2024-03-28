@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const source = quotes[randomIndex].source;
     document.getElementById('quote').innerHTML = quote;
     document.getElementById('source').innerHTML = source;
-    document.getElementById('source').style.opacity = 1;
     document.getElementById('quote').setAttribute('data-source', source);
 
     var candle = document.getElementById('candle');
