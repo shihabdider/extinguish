@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Extinguish",
+  "version": "1.0",
+  "description": "A simple chrome extension to help you focus on your work by blocking distracting websites some of the time.",
+  "permissions": ["storage", "webRequest", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
