@@ -3,7 +3,11 @@
   "name": "Extinguish",
   "version": "1.0",
   "description": "A simple chrome extension to help you focus on your work by blocking distracting websites some of the time.",
-  "permissions": ["storage", "webRequest", "webNavigation"],
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webNavigation"
+  ],
   "icons": {
     "128": "icon128.png"
   },
@@ -13,18 +17,28 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["background.js", "block.js", "options.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "background.js",
+        "block.js",
+        "options.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "options.html"
   },
   "options_page": "options.html",
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ],
   "content_security_policy": {
