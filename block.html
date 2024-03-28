@@ -22,7 +22,13 @@
             margin: 0 auto;
             opacity: 0;
             transition: opacity 3s ease-in-out;
+            text-align: left;
+        }
+        #quote::after {
+            content: "--Dhammapada, verse 103";
+            display: block;
             text-align: right;
+            margin-top: 10px;
         }
         @keyframes candleFlicker {
             from { opacity: 1; }
@@ -44,6 +50,7 @@
 <body>
     <div id="candle"></div>
     <div id="quote">Though one may conquer a thousand times a thousand men in battle, the noblest victor is the one who conquers himself.<br>--Dhammapada, verse 103</div>
+    <div id="quote">Though one may conquer a thousand times a thousand men in battle, the noblest victor is the one who conquers himself.</div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var candle = document.getElementById('candle');
